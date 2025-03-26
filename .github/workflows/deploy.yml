@@ -26,3 +26,10 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validar CSS
+        run: npx stylelint "**/*.css"  
+
+      - name: Ejecutar pruebas con Jest
+        run: npm test
