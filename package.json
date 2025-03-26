@@ -1,0 +1,23 @@
+{
+  "name": "actividad6",
+  "version": "1.0.0",
+  "main": "test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiomm003/Actividad6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiomm003/Actividad6/issues"
+  },
+  "homepage": "https://github.com/sergiomm003/Actividad6#readme",
+  "description": ""
+}
