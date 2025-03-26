@@ -11,25 +11,15 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v2
-      - name: Validar HTML
-        uses: chrisdholt/html5-validator-action@v1.0.0
+      - name: Validar HTML con HTMLHint
+        uses: wearerequired/htmlhint-action@v1
         with:
-          file: ./index.html
+          files: "*.html"
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: validate-html
-    steps:
-      - name: Checkout código
-        uses: actions/checkout@v2
-      - name: Configurar GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./
-          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Validar CSS
         run: npx stylelint "**/*.css"  
 
       - name: Ejecutar pruebas con Jest
         run: npm test
+      
